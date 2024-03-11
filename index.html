@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DECODIFICADOR DE TEXTO </title>
+    <link rel="stylesheet" href="./resource/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a>
+            <img src="./resource/img/logo-alura.svg" alt="logo-alura">
+        </a>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo__input">
+            <div class="conteudo__input__texto">
+                <textarea class="texto__area__input" id="textInput" placeholder="Digite seu texto aqui"></textarea>
+            </div>
+            <div class="conteudo__input__alerta">
+                <img class="icone__alerta" src="./resource/img/exclamacao.svg" alt="exclamacao">                
+            </div>
+            <div class="conteudo__input__botoes">
+                <button onclick="encrypt()" class="btn__criptografar" id="encript"> Criptografar </button>
+                <button onclick="descrypt()" class="btn__descriptografar" id="descript"> Descriptografar </button>
+            </div>
+        </section>
+        <section class="conteudo__output">
+            <div class="conteudo__output__texto" id="textoEncrypt">
+                <img class="conteudo__output__vazio__imagem" id="imagem" src="./resource/img/boneco-alura.svg">
+                <h1 class="conteudo__output__vazio__titulo" id="titulo"> Nenhuma mensagem encontrada </h1>
+                <p class="conteudo__output__vazio__texto" id="paragrafo"> Digite um texto que você deseja criptografar ou descriptografar. </p>
+                <p class="conteudo__output__texto__resultado" id="textoResultado" hidden></p>
+                <div class="conteudo__output__texto__resultado__botoes" id="output-Botoes" style="display: none;">
+                    <button onclick="copiarTextoCriptografado ()" id="copiar" class="btn__copiar-limpar"> Copiar </button>
+                    <button onclick="limparTexto ()" id="limpar" class="btn__copiar-limpar"> Limpar</button>
+                </div>       
+            </div>                        
+        </section>
+    </main>
+    <footer class="rodape">
+        <p class="rodape texto"> "Desenvolvido por Luis Felipe" </p>    
+    </footer>
+    <script src="./resource/app.js"></script>
+</body>
+</html>

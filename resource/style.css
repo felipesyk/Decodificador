@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-background: #E8E8E8;
+    --cor-primaria: #0A3871;
+    --cor-secundaria: #D8DFE8;
+    --cor-hover-btn: #9B9797;
+    --cor-background-output: #FFFFFF;
+    --cor-texts: #495057;
+    --fonte-primaria: 'Inter', sans-serif;
+}
+* {
+    margin:0;
+    padding:0;    
+}
+* :focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-background);
+}
+.cabecalho {    
+    padding: 3% 0% 0% 3%;
+}
+.conteudo {
+    padding: 5% 0% 0% 15%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.texto__area__input {
+    resize: none;
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 400;
+    height: 60vh;
+    width: 50vw;
+    color: var(--cor-primaria);
+    border-style: none;
+    border-color: transparent;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+.btn__criptografar {
+    width: 20.5rem;
+    height: 4rem;
+    color: var(--cor-background-output);
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    background-color: var(--cor-hover-btn);
+    color: var(--cor-primaria);
+}
+.btn__descriptografar {
+    width: 20.5rem;
+    height: 4rem;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-fonte-textarea-esquerda);
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.conteudo__output__texto {
+    border-radius: 2rem;
+    margin: -30% 0 0 0 ;
+    height: 90vh;
+    width: 90%;
+    background-color: var(--cor-background-output);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* box-shadow: 0px 24px 32px -8px #00000014; */
+}
+.conteudo__output__vazio__titulo {
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-texts);
+    padding: 2% 2%;
+}
+.conteudo__output__vazio__texto {
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-texts);
+    padding: 2% 3%;
+}
+.conteudo__output__texto__resultado {
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 2rem;
+    overflow-y: scroll;
+    width: 60vh;
+    height: 80%;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    hyphens: auto;
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.conteudo__output__texto__resultado__botoes {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 24px;
+}
+.btn__copiar-limpar {
+    display: flex;
+    justify-content: center;
+    border: 0;
+    background: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    width: 38%;
+    height: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 15px 0;
+}
+.rodape {
+    padding: 0.5rem;
+    color: var(--cor-primaria);
+    background-color: var(--cor-background);
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .cabecalho {
+        padding: 5% 0% 0% 0%;        
+    }
+    .conteudo {
+        padding: 5% 5% 0% 5%;
+        flex-direction: column;
+    }
+    .conteudo__input {
+        width: 100%;
+    }
+    .texto__area__input {
+        width: 100%;
+    }
+    .btn__criptografar {
+        width: 100%;
+        justify-content: center;
+    }
+    .btn__criptografar:hover {
+        background-color: var(--cor-hover-btn);
+    }
+    .btn__descriptografar {
+        width: 100%;
+    }
+    .conteudo__output__vazio__imagem {
+        display: none;
+    }
+    .conteudo__output {
+        margin: 0;
+        width: 100%;
+    }
+    .conteudo__output__texto {
+        margin: 15% 0% 5% 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .conteudo__output__texto__resultado {
+        width: 90%;
+    }
+    .conteudo__output__texto__resultado__botoes{
+        justify-content: left;        
+        width: 20.5rem;
+        height: 4rem;
+    }    
+    .rodape {
+        padding: 3%;
+    }
+}
